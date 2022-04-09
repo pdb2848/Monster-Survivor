@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class people : MonoBehaviour
 {
-    private int a;
+    private int a = 60;
 
-    float b;
+    float b = 10;
     void Start()
     {
         
