@@ -39,31 +39,29 @@ public class PlayerMove : MonoBehaviour
         float v = Input.GetAxis("Vertical");        //상하 이동
         transform.position += Vector3.up * v * playerSpeed * Time.deltaTime;
         
-
-
-
-        //2
-        /*
-        //좌우이동
+        //좌우반전 및 애니메이션
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-
-            transform.position += Vector3.left * playerSpeed * Time.deltaTime;
-            this.gameObject.transform.localEulerAngles = new Vector3(0, 180, 0);   //좌우반전
-            animator.SetBool("Walk", true);   //뛰는 애니메이션 실행
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.right * playerSpeed * Time.deltaTime;
             this.gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);   //좌우반전
             animator.SetBool("Walk", true);   //뛰는 애니메이션 실행
         }
-
-        else if (!Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            this.gameObject.transform.localEulerAngles = new Vector3(0, 180, 0);   //좌우반전
+            animator.SetBool("Walk", true);   //뛰는 애니메이션 실행
+        }
+        else if (Input.GetKey(KeyCode.UpArrow))
+        {
+            animator.SetBool("Walk", true);   //뛰는 애니메이션 실행
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            animator.SetBool("Walk", true);   //뛰는 애니메이션 실행
+        }
+        else
         {
             animator.SetBool("Walk", false);   //뛰는 애니메이션 종료
         }
-        */
+        
     }
 }
