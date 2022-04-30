@@ -24,14 +24,12 @@ public class PlyaerMove : MonoBehaviour
     //플레이어 이동 함수
     void Walk()
     {
-        //1
-        /*
         float h = Input.GetAxis("Horizontal");      //좌우 이동
         transform.position += Vector3.right * h * playerSpeed * Time.deltaTime;
 
         float v = Input.GetAxis("Vertical");        //상하 이동
         transform.position += Vector3.up * v * playerSpeed * Time.deltaTime;
-        */
+        
 
 
 
