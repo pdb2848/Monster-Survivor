@@ -7,7 +7,8 @@ public class MonsterMoving : MonoBehaviour
     public GameObject target_Object;
     Rigidbody2D rid;
     Animator animatorPlayer;
-    public float speed;
+    public float monsterSpeed;
+    public float monsterHP;
     CapsuleCollider capsuleCollider;
     
     // Start is called before the first frame update
@@ -22,7 +23,12 @@ public class MonsterMoving : MonoBehaviour
         var target_dirction = target_Object.transform.position - transform.position;
         if (Vector3.Distance(target_Object.transform.position, transform.position) > 0.7f)
         {
-            rid.MovePosition(transform.position + target_dirction.normalized * speed);
+            rid.MovePosition(transform.position + target_dirction.normalized * monsterSpeed);
+        }
+
+        if(monsterHP <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
