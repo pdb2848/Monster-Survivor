@@ -7,9 +7,9 @@ public class MonsterMoving : MonoBehaviour
     public GameObject target_Object;
     Rigidbody2D rid;
     Animator animatorPlayer;
-    public float speed = 0.1f;
+    public float speed;
     CapsuleCollider capsuleCollider;
-    public bool monster_attack_check = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,15 @@ public class MonsterMoving : MonoBehaviour
         if (Vector3.Distance(target_Object.transform.position, transform.position) > 0.7f)
         {
             rid.MovePosition(transform.position + target_dirction.normalized * speed);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            PlayerMove.pm.playerHP -= 10;
+            Debug.Log(PlayerMove.pm.playerHP);
         }
     }
 }

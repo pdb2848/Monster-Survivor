@@ -2,13 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlyaerMove : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     //에니매이터 변수
     Animator animator;
     //플레이어 이동 속도 (미정)
     float playerSpeed = 3.0f;
-    
+    public float playerHP = 100;
+
+    public static PlayerMove pm;
+    void Awake()
+    {
+        if(pm == null)
+        {
+            pm = this;
+        }
+    }
 
 
     void Start()

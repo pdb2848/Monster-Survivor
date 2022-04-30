@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 2497136523704180614, guid: 4e78d482a177b254d9726e1c7ce06353, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e78d482a177b254d9726e1c7ce06353, type: 3}
 --- !u!1 &628638327
@@ -272,6 +276,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2497136523704180614, guid: 4e78d482a177b254d9726e1c7ce06353, type: 3}
   m_PrefabInstance: {fileID: 484296047}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &724580274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724580267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb0a955622dc804aa87a8825cb956a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1439698377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2801494281514194581, guid: f5ab0ad2183e7df4fa07155caddc9b5c, type: 3}
@@ -291,7 +307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target_Object: {fileID: 724580267}
   speed: 0.01
-  monster_attack_check: 0
 --- !u!1001 &1523660705
 PrefabInstance:
   m_ObjectHideFlags: 0
